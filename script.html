@@ -5,6 +5,9 @@
 </head>
 
 <body>
+<button onclick="myFunction1()">Sort Alphabetically</button>
+<button onclick="myFunction2()">Sort Numerically</button>
+    
 
 <h2>Demo JavaScript in Body</h2>
 
@@ -14,9 +17,21 @@
 <!-- <button onclick="window.print()">Print this page</button> -->
 
 <script>
+    const points = [40, 100, 1, 5, 25, 10];
+    document.getElementById("demo").innerHTML = points;
 
+    function myFunction1() {
+    points.sort();
+    document.getElementById("demo").innerHTML = points;
+    }
+
+    function myFunction2() {
+    points.sort(function(a, b){return a - b});
+    document.getElementById("demo").innerHTML = points;
+    }
 </script>
 
 <script src="script.js"></script>
 </body>
 </html>
+
